@@ -37,6 +37,9 @@ dependencies:
 
   icon_checker_core:
     path: ../icon_checker_core
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
+  bloc_test: ^9.0.3
 
 dev_dependencies:
   flutter_test:
