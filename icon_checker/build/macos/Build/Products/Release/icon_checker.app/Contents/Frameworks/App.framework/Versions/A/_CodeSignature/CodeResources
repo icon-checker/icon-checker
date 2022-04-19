@@ -10,15 +10,15 @@
 		</data>
 		<key>Resources/flutter_assets/AssetManifest.json</key>
 		<data>
-		oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+		EQxWj7bU/mv4+GTrIuqNioJ8i2I=
 		</data>
 		<key>Resources/flutter_assets/FontManifest.json</key>
 		<data>
-		vKJkVIcw+LGHFnKJGwrQwCREv68=
+		N4ajeBCsIwHWMzKkypqqrUPMECc=
 		</data>
 		<key>Resources/flutter_assets/NOTICES.Z</key>
 		<data>
-		/RWEk0wmMbWfKyEVdCpHe91HfWk=
+		iA/YWu6EoetbiD/duse3RJsAL+8=
 		</data>
 		<key>Resources/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -27,6 +27,10 @@
 		<key>Resources/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
 		P7bb/oR3EhwqCIH1M6LyTuBIWYU=
+		</data>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/ErgosignGlyphIcons2-Normal.ttf</key>
+		<data>
+		irOv3UiJkPn0yzAhn1D8DW4QuuE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -46,33 +50,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+			EQxWj7bU/mv4+GTrIuqNioJ8i2I=
 			</data>
 			<key>hash2</key>
 			<data>
-			Sps95+7JukayebvM0TLjL1LW1VXXndpKp/O8tOm9ZR8=
+			pvhx6bPsWgzkIBwCBBDJO5YvpTXcLZ04vWvTljSbkF8=
 			</data>
 		</dict>
 		<key>Resources/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vKJkVIcw+LGHFnKJGwrQwCREv68=
+			N4ajeBCsIwHWMzKkypqqrUPMECc=
 			</data>
 			<key>hash2</key>
 			<data>
-			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
+			tXuskQL6RnxlOyOoBgIYbvgHNniDqe3XAZ4o93lgrk4=
 			</data>
 		</dict>
 		<key>Resources/flutter_assets/NOTICES.Z</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/RWEk0wmMbWfKyEVdCpHe91HfWk=
+			iA/YWu6EoetbiD/duse3RJsAL+8=
 			</data>
 			<key>hash2</key>
 			<data>
-			WrJDL45oL9pbj9eu2entgJZaIoHKA8h/UxW/+o0DSq8=
+			BK5m7MNxUAN207eONTQCd20QJBqmug0UcC6KQvEAUl0=
 			</data>
 		</dict>
 		<key>Resources/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -95,6 +99,17 @@
 			<key>hash2</key>
 			<data>
 			x6NX+tjyECiQtyzbbjyY8U2zoZ7GDbJtE+T+k/dzgI0=
+			</data>
+		</dict>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/ErgosignGlyphIcons2-Normal.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			irOv3UiJkPn0yzAhn1D8DW4QuuE=
+			</data>
+			<key>hash2</key>
+			<data>
+			daN3YSvykVL2aVZqxuWFEgTi5j9R892vEHNJucANyek=
 			</data>
 		</dict>
 	</dict>
