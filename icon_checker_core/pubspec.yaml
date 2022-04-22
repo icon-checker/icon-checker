@@ -8,8 +8,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  equatable: ^2.0.3
   flutter:
     sdk: flutter
+  gap: ^2.0.0
+  tap_builder: ^0.3.4
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +24,17 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  fonts:
+    - family: ErgosignGlyphIcons2
+      fonts:
+        - asset: packages/icon_checker_core/fonts/ErgosignGlyphIcons2-Normal.ttf
+    - family: Interstate
+      fonts:
+        - asset: packages/icon_checker_core/fonts/Interstate-Black.otf
+        - asset: packages/icon_checker_core/fonts/Interstate-Bold.otf
+        - asset: packages/icon_checker_core/fonts/Interstate-Light.otf
+        - asset: packages/icon_checker_core/fonts/Interstate-Regular.otf
+
 
   # To add assets to your package, add an assets section, like this:
   # assets:
