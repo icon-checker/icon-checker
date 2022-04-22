@@ -1,166 +1,113 @@
 import 'package:icon_checker_core/icon_checker_core.dart';
-import 'package:tap_builder/tap_builder.dart';
 
-class Button extends StatelessWidget {
-  const Button({
-    Key? key,
-    this.icon,
-    this.title,
-    this.onTap,
-    this.mainAxisSize = MainAxisSize.min,
-  })  : assert(
-          icon != null || title != null,
-        ),
+class Button extends StatefulWidget {
+  const Button({Key? key, this.onTap, this.child, this.icon})
+      : _text = null,
         super(key: key);
 
-  final String? icon;
-  final String? title;
-  final MainAxisSize mainAxisSize;
+  const Button.text(String text, {Key? key, this.onTap})
+      : child = null,
+        icon = null,
+        _text = text,
+        super(key: key);
+
   final VoidCallback? onTap;
+  final Widget? child;
+  final Widget? icon;
+  final String? _text;
+
+  //tbd icon
 
   @override
-  Widget build(BuildContext context) {
-    return TapBuilder(
-      onTap: onTap,
-      builder: (context, state, hasFocus) {
-        switch (state) {
-          case TapState.hover:
-            return Semantics(
-              enabled: true,
-              selected: true,
-              child: ButtonLayout.hovered(
-                icon: icon,
-                title: title,
-                mainAxisSize: mainAxisSize,
-              ),
-            );
-          case TapState.pressed:
-            return Semantics(
-              enabled: true,
-              selected: true,
-              child: ButtonLayout.pressed(
-                icon: icon,
-                title: title,
-                mainAxisSize: mainAxisSize,
-              ),
-            );
-          default:
-            return Semantics(
-              enabled: true,
-              selected: true,
-              child: ButtonLayout.inactive(
-                icon: icon,
-                title: title,
-                mainAxisSize: mainAxisSize,
-              ),
-            );
-        }
-      },
-    );
+  State<StatefulWidget> createState() => _ButtonState();
+}
+
+class _ButtonState extends State<Button> {
+  bool _isPressed = false;
+  bool _isHovered = false;
+
+  bool _isEnabled() => widget.onTap != null;
+
+  void _press() {
+    if (!_isEnabled()) return;
+    setState(() {
+      _isPressed = true;
+    });
   }
-}
 
-enum ButtonVisual {
-  inactive,
-  hovered,
-  pressed,
-}
+  void _release() {
+    if (!_isEnabled()) return;
+    setState(() {
+      _isPressed = false;
+    });
+  }
 
-class ButtonLayout extends StatelessWidget {
-  const ButtonLayout.inactive({
-    Key? key,
-    this.icon,
-    this.title,
-    this.mainAxisSize = MainAxisSize.min,
-    this.inactiveBackgroundColor,
-    this.hoveredBackgroundColor,
-    this.pressedBackgroundColor,
-    this.foregroundColor,
-  })  : _state = ButtonVisual.inactive,
-        assert(
-          icon != null || title != null,
-        ),
-        super(key: key);
+  void _enter() {
+    if (!_isEnabled()) return;
+    setState(() {
+      _isHovered = true;
+    });
+  }
 
-  const ButtonLayout.hovered({
-    Key? key,
-    this.icon,
-    this.title,
-    this.mainAxisSize = MainAxisSize.min,
-    this.inactiveBackgroundColor,
-    this.hoveredBackgroundColor,
-    this.pressedBackgroundColor,
-    this.foregroundColor,
-  })  : _state = ButtonVisual.hovered,
-        assert(
-          icon != null || title != null,
-        ),
-        super(key: key);
-
-  const ButtonLayout.pressed({
-    Key? key,
-    this.icon,
-    this.title,
-    this.mainAxisSize = MainAxisSize.min,
-    this.inactiveBackgroundColor,
-    this.hoveredBackgroundColor,
-    this.pressedBackgroundColor,
-    this.foregroundColor,
-  })  : _state = ButtonVisual.pressed,
-        assert(
-          icon != null || title != null,
-        ),
-        super(key: key);
-
-  final String? icon;
-  final String? title;
-  final MainAxisSize mainAxisSize;
-  final ButtonVisual _state;
-  final Color? inactiveBackgroundColor;
-  final Color? hoveredBackgroundColor;
-  final Color? pressedBackgroundColor;
-  final Color? foregroundColor;
+  void _exit() {
+    if (!_isEnabled()) return;
+    setState(() {
+      _isHovered = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     final theme = XTheme.of(context);
-    final title = this.title;
-    final icon = this.icon;
-    final hasBoth = (title != null && icon != null);
-    final foregroundColor = this.foregroundColor ?? theme.colors.accentOpposite;
-    final backgroundColor = () {
-      switch (_state) {
-        case ButtonVisual.inactive:
-          return inactiveBackgroundColor ?? theme.colors.accent;
-        case ButtonVisual.hovered:
-          return hoveredBackgroundColor ?? theme.colors.accentHighlight;
-        case ButtonVisual.pressed:
-          return pressedBackgroundColor ?? theme.colors.accentHighlight2;
-      }
-    }();
-    return AnimatedContainer(
-      duration: theme.durations.quick,
-      decoration: BoxDecoration(
-        borderRadius: theme.radius.asBorderRadius().small,
-        color: backgroundColor,
-      ),
-      padding: EdgeInsets.symmetric(
-        vertical: theme.spacing.semiSmall,
-        horizontal:
-            title != null ? theme.spacing.semiBig : theme.spacing.semiSmall,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (title != null)
-            XText.title1(
-              title,
-              color: foregroundColor,
+
+    // todo new color class, use enum for visual state.
+    final backgroundColor = _isPressed
+        ? theme.colors.pressedBackground
+        : _isHovered
+            ? theme.colors.hoverBackground
+            : theme.colors.blue;
+    final foregroundColor = theme.colors.labels;
+
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+          minHeight: theme.constraints.smallHeight,
+          maxHeight: theme.constraints.smallHeight),
+      child: MouseRegion(
+        onEnter: (_) => _enter(),
+        onExit: (_) => _exit(),
+        child: GestureDetector(
+          onTap: widget.onTap,
+          onTapDown: (_) => _press(),
+          onTapUp: (_) => _release(),
+          child: Opacity(
+            opacity: _isEnabled()
+                ? theme.opacities.regularOpacity
+                : theme.opacities.disabledOpacity,
+            child: AnimatedContainer(
+              duration: theme.durations.quick,
+              decoration: BoxDecoration(
+                color: backgroundColor,
+                // todo: radius
+              ),
+              padding: EdgeInsets.only(
+                  left: theme.spacing.medium, right: theme.spacing.medium),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (widget._text != null)
+                    Text(
+                      widget._text!,
+                      // todo: font style
+                      style: TextStyle(color: foregroundColor),
+                    )
+                  else if (widget.child != null)
+                    widget.child!
+                ],
+              ),
             ),
-          if (hasBoth) const XGap.semiSmall(),
-          if (icon != null) XIcon.regular(icon, color: foregroundColor),
-        ],
+          ),
+        ),
       ),
     );
   }

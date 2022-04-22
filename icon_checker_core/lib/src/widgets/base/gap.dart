@@ -17,15 +17,15 @@ extension GapSizeExtension on GapSize {
       case GapSize.none:
         return 0;
       case GapSize.small:
-        return theme.spacing.small;
+        return theme.x_spacing.small;
       case GapSize.semiSmall:
-        return theme.spacing.semiSmall;
+        return theme.x_spacing.semiSmall;
       case GapSize.regular:
-        return theme.spacing.regular;
+        return theme.x_spacing.regular;
       case GapSize.semiBig:
-        return theme.spacing.semiBig;
+        return theme.x_spacing.semiBig;
       case GapSize.big:
-        return theme.spacing.big;
+        return theme.x_spacing.big;
     }
   }
 }

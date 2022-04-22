@@ -69,10 +69,10 @@ class _HomePageState extends State<HomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Button.text('Click me', onTap: (() => print('tap'))),
+            SizedBox(height: 4.0),
             Button(
-              title: "Click me",
-              icon: theme.icons.characters.iconAdd,
-              onTap: () => print("Clicked"),
+              child: Text('Disabled with custom content'),
             )
           ],
         ),
