@@ -1,9 +1,0 @@
-version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
-options: "a4a403bdde4144706e008de51b2a7e16294521111299e750d5f9535b87782b48"
-build_start_time: [1649677410, 174062967]
-build_end_time: [1649677417, 949277877]
-inputs:
-  ? "/Users/florian.blasius/Projects/Internal/ergosign-icon-checker-flutter/icon_checker/macos/Flutter/GeneratedPluginRegistrant.swift"
-  : [1649677372, 361137866]
-  "/Users/florian.blasius/Projects/Internal/ergosign-icon-checker-flutter/icon_checker/macos/Runner/AppDelegate.swift": [1634330199, 0]
-  "/Users/florian.blasius/Projects/Internal/ergosign-icon-checker-flutter/icon_checker/macos/Runner/MainFlutterWindow.swift": [1634330199, 0]

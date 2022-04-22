@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icon_checker_core/icon_checker_core.dart';
 import 'home/home.dart';
 
 class App extends StatelessWidget {
@@ -21,7 +22,9 @@ class App extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(title: 'Flutter Demo Home Page'),
+      home: XTheme(
+          data: XThemeData.regular(),
+          child: const HomePage(title: 'Flutter Demo Home Page')),
     );
   }
 }

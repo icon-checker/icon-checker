@@ -10,15 +10,15 @@
 		</data>
 		<key>Resources/flutter_assets/AssetManifest.json</key>
 		<data>
-		oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+		1ci2Qa3e/LkBZ2iJqBcjsFoWsoo=
 		</data>
 		<key>Resources/flutter_assets/FontManifest.json</key>
 		<data>
-		vKJkVIcw+LGHFnKJGwrQwCREv68=
+		y3/c+96HRhszjMY2fiEzNzyHFJw=
 		</data>
 		<key>Resources/flutter_assets/NOTICES.Z</key>
 		<data>
-		iA/YWu6EoetbiD/duse3RJsAL+8=
+		UkaQFFbLAwiKfBqGzn8TiyHA9OY=
 		</data>
 		<key>Resources/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -30,11 +30,31 @@
 		</data>
 		<key>Resources/flutter_assets/kernel_blob.bin</key>
 		<data>
-		MmhV4TZWZeem+cU3mf8IDnmzMsQ=
+		xAeEvzeXdFOvwB0G+hRodVvxoOU=
 		</data>
 		<key>Resources/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
 		P7bb/oR3EhwqCIH1M6LyTuBIWYU=
+		</data>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/ErgosignGlyphIcons2-Normal.ttf</key>
+		<data>
+		irOv3UiJkPn0yzAhn1D8DW4QuuE=
+		</data>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/Interstate-Black.otf</key>
+		<data>
+		cnAQE+7KPPFoozOCTd/uvZR2GtA=
+		</data>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/Interstate-Bold.otf</key>
+		<data>
+		jcsU67M+S9NbRdCTsncIVdCEmk0=
+		</data>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/Interstate-Light.otf</key>
+		<data>
+		5KDoPO02MaLzXQlEj+MOabigBjs=
+		</data>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/Interstate-Regular.otf</key>
+		<data>
+		rE7181deq7YBlXuh2IFg+W0PGyU=
 		</data>
 		<key>Resources/flutter_assets/vm_snapshot_data</key>
 		<data>
@@ -58,33 +78,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+			1ci2Qa3e/LkBZ2iJqBcjsFoWsoo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Sps95+7JukayebvM0TLjL1LW1VXXndpKp/O8tOm9ZR8=
+			R2Do+1FYPeH4EeAZ0EZKydFqAlhDQXy/gxmdHCt2OqM=
 			</data>
 		</dict>
 		<key>Resources/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vKJkVIcw+LGHFnKJGwrQwCREv68=
+			y3/c+96HRhszjMY2fiEzNzyHFJw=
 			</data>
 			<key>hash2</key>
 			<data>
-			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
+			p9yiqXjIdCv/JxTXKWgzTVQdLdAc69Zub9iJ4+23ji0=
 			</data>
 		</dict>
 		<key>Resources/flutter_assets/NOTICES.Z</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iA/YWu6EoetbiD/duse3RJsAL+8=
+			UkaQFFbLAwiKfBqGzn8TiyHA9OY=
 			</data>
 			<key>hash2</key>
 			<data>
-			BK5m7MNxUAN207eONTQCd20QJBqmug0UcC6KQvEAUl0=
+			4tPeE9+GXrcCEwL5+lFmk+ZKQ7a+lnP6yVOhtBANGRc=
 			</data>
 		</dict>
 		<key>Resources/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -113,11 +133,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MmhV4TZWZeem+cU3mf8IDnmzMsQ=
+			xAeEvzeXdFOvwB0G+hRodVvxoOU=
 			</data>
 			<key>hash2</key>
 			<data>
-			AyEFFSFUzSCcNATbu3evE9Imz9DiJNTku3dFAS+rP9o=
+			s3fpZY5IX7fQFs1P8+XPI7jm+q3BAqCgVlAbOiYNdPw=
 			</data>
 		</dict>
 		<key>Resources/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -129,6 +149,61 @@
 			<key>hash2</key>
 			<data>
 			x6NX+tjyECiQtyzbbjyY8U2zoZ7GDbJtE+T+k/dzgI0=
+			</data>
+		</dict>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/ErgosignGlyphIcons2-Normal.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			irOv3UiJkPn0yzAhn1D8DW4QuuE=
+			</data>
+			<key>hash2</key>
+			<data>
+			daN3YSvykVL2aVZqxuWFEgTi5j9R892vEHNJucANyek=
+			</data>
+		</dict>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/Interstate-Black.otf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cnAQE+7KPPFoozOCTd/uvZR2GtA=
+			</data>
+			<key>hash2</key>
+			<data>
+			bqsR+FPUPMRGo0bOaPZQRuX+lrh3EVDOHlhlWcBC67U=
+			</data>
+		</dict>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/Interstate-Bold.otf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jcsU67M+S9NbRdCTsncIVdCEmk0=
+			</data>
+			<key>hash2</key>
+			<data>
+			TeWjpThzTOUVA2wn0o2syIh15Oc+G1gGOQEY5IBAcxM=
+			</data>
+		</dict>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/Interstate-Light.otf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5KDoPO02MaLzXQlEj+MOabigBjs=
+			</data>
+			<key>hash2</key>
+			<data>
+			c5v4UsSXyYDYsiQwZDRwBeR/Dl0HJXqDwKvGk0yi9w8=
+			</data>
+		</dict>
+		<key>Resources/flutter_assets/packages/icon_checker_core/fonts/Interstate-Regular.otf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rE7181deq7YBlXuh2IFg+W0PGyU=
+			</data>
+			<key>hash2</key>
+			<data>
+			MkKSrJJ6HRcZfqQqPRt4ioiwC8QvfEmxk/vytd/nb4c=
 			</data>
 		</dict>
 		<key>Resources/flutter_assets/vm_snapshot_data</key>
