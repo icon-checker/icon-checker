@@ -65,7 +65,7 @@ class _ButtonState extends State<Button> {
         ? theme.colors.pressedBackground
         : _isHovered
             ? theme.colors.hoverBackground
-            : theme.colors.blue;
+            : null;
     final foregroundColor = theme.colors.labels;
 
     return ConstrainedBox(
@@ -96,11 +96,10 @@ class _ButtonState extends State<Button> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   if (widget._text != null)
-                    Text(
-                      widget._text!,
-                      // todo: font style
-                      style: TextStyle(color: foregroundColor),
-                    )
+                    Text(widget._text!,
+                        // todo: font style
+                        style: theme.typography.buttonStyle
+                            .copyWith(color: foregroundColor))
                   else if (widget.child != null)
                     widget.child!
                 ],

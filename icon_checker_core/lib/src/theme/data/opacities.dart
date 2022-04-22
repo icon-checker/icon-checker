@@ -5,7 +5,7 @@ class Opacities extends Equatable {
       {required this.regularOpacity, required this.disabledOpacity});
 
   factory Opacities.regular() =>
-      const Opacities(regularOpacity: 1.0, disabledOpacity: 0.3);
+      const Opacities(regularOpacity: 1.0, disabledOpacity: 0.5);
 
   final double regularOpacity;
   final double disabledOpacity;

@@ -9,52 +9,32 @@ const fontSize12 = 12.0;
 const fontSize20 = 20.0;
 const fontSize28 = 28.0;
 
-class XTypographyData extends Equatable {
-  const XTypographyData({
-    required this.paragraph1,
-    required this.title1,
+class Typography extends Equatable {
+  const Typography({
+    required this.buttonStyle,
+    required this.textStyle,
   });
 
-  factory XTypographyData.regular() => const XTypographyData(
-        paragraph1: TextStyle(
+  factory Typography.regular() => const Typography(
+        buttonStyle: TextStyle(
           fontFamily: interstateFamily,
           package: package,
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.bold,
           fontSize: fontSize12,
           decoration: TextDecoration.none,
         ),
-        title1: TextStyle(
+        textStyle: TextStyle(
           fontFamily: interstateFamily,
           package: package,
-          fontSize: fontSize20,
-          fontWeight: FontWeight.bold,
+          fontSize: fontSize12,
+          fontWeight: FontWeight.normal,
           decoration: TextDecoration.none,
         ),
       );
 
-  factory XTypographyData.small() => const XTypographyData(
-        paragraph1: TextStyle(
-          fontFamily: interstateFamily,
-          package: package,
-          fontWeight: FontWeight.w400,
-          fontSize: fontSize10,
-          decoration: TextDecoration.none,
-        ),
-        title1: TextStyle(
-          fontFamily: interstateFamily,
-          package: package,
-          fontSize: fontSize20,
-          fontWeight: FontWeight.bold,
-          decoration: TextDecoration.none,
-        ),
-      );
-
-  final TextStyle paragraph1;
-  final TextStyle title1;
+  final TextStyle buttonStyle;
+  final TextStyle textStyle;
 
   @override
-  List<Object?> get props => [
-        title1.named('title1'),
-        paragraph1.named('paragraph1'),
-      ];
+  List<Object?> get props => [buttonStyle, textStyle];
 }
