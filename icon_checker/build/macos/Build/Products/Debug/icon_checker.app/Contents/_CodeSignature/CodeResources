@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		hDdMik/aUGFYRbEHJrbzKgpO4Gk=
+		ELuZ4/cw+vEp+apum+GP//gH76U=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
 		<data>
@@ -27,19 +27,19 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			lC+2JF5viC7HZgoV77korIk+9yw=
+			hDDgIEuJg/v4hfrGBEzOIcxk9uo=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"13a0a9d3d6ba429699fc7458530790cb171e4c28" or cdhash H"942fb6245e6f882ec7660a15efb928ac893ef72c"</string>
+			<string>cdhash H"d742b2603b4be0cb908390e4cb7f1cce673f5095" or cdhash H"8430e0204b8983fbf885fac6044cce21cc64f6ea"</string>
 		</dict>
 		<key>Frameworks/FlutterMacOS.framework</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			5akwFB8brGsMNEMkBSTX80J6CIs=
+			Kjmt2CIRN5VHy9+zoTLLuDLrnjg=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"93c8de6c3c7754df797cc13f09f5cd69d1f6e4d9" or cdhash H"e5a930141f1bac6b0c3443240524d7f3427a088b"</string>
+			<string>cdhash H"ff145f6a4005fa621fbde3fe46642a5c99e74d40" or cdhash H"2a39add82211379547cbdfb3a132cbb832eb9e38"</string>
 		</dict>
 		<key>Frameworks/libswiftAppKit.dylib</key>
 		<dict>
@@ -209,11 +209,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hDdMik/aUGFYRbEHJrbzKgpO4Gk=
+			ELuZ4/cw+vEp+apum+GP//gH76U=
 			</data>
 			<key>hash2</key>
 			<data>
-			GXqtLW/fBZ1n2h5LLLLbkp8LotN3Ovun23f5KHrBc7k=
+			R/ORbqAOtsazfoixgiQ6Qj6Y0BYWu1NociiXbES3Bt8=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
