@@ -52,7 +52,10 @@ class _HomePageState extends State<HomePage> {
             // horizontal).
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Button.text('Click me', onTap: (() => print('tap'))),
+              Label.title1('Icon Checker', color: theme.colors.labels),
+              Label.regular('Chose Files', color: theme.colors.labels),
+              const Gap.large(),
+              Button.text('CHECK DATA', onTap: (() => print('tap'))),
               const Gap.small(
                 isVertical: false,
               ),
