@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:icon_checker_core/icon_checker_core.dart';
 
 class HomePage extends StatefulWidget {
@@ -44,11 +43,6 @@ class _HomePageState extends State<HomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the HomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
       body: Container(
         color: theme.colors.background,
         child: Center(
@@ -72,8 +66,8 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Button.text('Click me', onTap: (() => print('tap'))),
-              SizedBox(height: 4.0),
-              Button(
+              const SizedBox(height: 4.0),
+              const Button(
                 child: Text('Disabled with custom content'),
               )
             ],

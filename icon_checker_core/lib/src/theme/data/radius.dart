@@ -6,17 +6,17 @@ class XRadiusData extends Equatable {
   const XRadiusData({
     required this.small,
     required this.regular,
-    required this.big,
+    required this.large,
   });
 
   const XRadiusData.regular()
       : small = const Radius.circular(4),
         regular = const Radius.circular(8),
-        big = const Radius.circular(16);
+        large = const Radius.circular(16);
 
   final Radius small;
   final Radius regular;
-  final Radius big;
+  final Radius large;
 
   XBorderRadiusData asBorderRadius() => XBorderRadiusData(this);
 
@@ -24,7 +24,7 @@ class XRadiusData extends Equatable {
   List<Object?> get props => [
         small.named('small'),
         regular.named('regular'),
-        big.named('big'),
+        large.named('big'),
       ];
 }
 
@@ -33,7 +33,7 @@ class XBorderRadiusData extends Equatable {
 
   BorderRadius get small => BorderRadius.all(_radius.small);
   BorderRadius get regular => BorderRadius.all(_radius.regular);
-  BorderRadius get big => BorderRadius.all(_radius.big);
+  BorderRadius get big => BorderRadius.all(_radius.large);
 
   final XRadiusData _radius;
 
