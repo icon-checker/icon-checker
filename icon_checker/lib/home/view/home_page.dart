@@ -53,10 +53,10 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Button.text('Click me', onTap: (() => print('tap'))),
-              const SizedBox(height: 4.0),
-              const Button(
-                child: Text('Disabled with custom content'),
-              )
+              const Gap.small(
+                isVertical: false,
+              ),
+              const Button.text('Disabled button')
             ],
           ),
         ),
