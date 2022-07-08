@@ -2,17 +2,15 @@ import 'package:equatable/equatable.dart';
 
 class Constraints extends Equatable {
   const Constraints(
-      {required this.smallHeight,
-      required this.mediumHeight,
-      required this.largeHeight});
+      {required this.sHeight, required this.mHeight, required this.lHeight});
 
-  final double smallHeight;
-  final double mediumHeight;
-  final double largeHeight;
+  final double sHeight;
+  final double mHeight;
+  final double lHeight;
 
-  factory Constraints.regular() => const Constraints(
-      smallHeight: 24.0, mediumHeight: 28.0, largeHeight: 32.0);
+  factory Constraints.regular() =>
+      const Constraints(sHeight: 24.0, mHeight: 28.0, lHeight: 32.0);
 
   @override
-  List<Object?> get props => [smallHeight, mediumHeight, largeHeight];
+  List<Object?> get props => [sHeight, mHeight, lHeight];
 }

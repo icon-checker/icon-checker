@@ -70,8 +70,8 @@ class _ButtonState extends State<Button> {
 
     return ConstrainedBox(
       constraints: BoxConstraints(
-          minHeight: theme.constraints.smallHeight,
-          maxHeight: theme.constraints.smallHeight),
+          minHeight: theme.constraints.sHeight,
+          maxHeight: theme.constraints.sHeight),
       child: MouseRegion(
         onEnter: (_) => _enter(),
         onExit: (_) => _exit(),
@@ -90,7 +90,7 @@ class _ButtonState extends State<Button> {
                 // todo: radius
               ),
               padding: EdgeInsets.only(
-                  left: theme.spacing.medium, right: theme.spacing.medium),
+                  left: theme.spacing.m, right: theme.spacing.m),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,

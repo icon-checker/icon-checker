@@ -7,8 +7,8 @@ const iconSize16 = 16.0;
 const iconSize22 = 22.0;
 const iconSize32 = 32.0;
 
-class XIconsData extends Equatable {
-  const XIconsData({
+class Icons extends Equatable {
+  const Icons({
     required this.fontFamily,
     required this.fontPackage,
     required this.characters,
@@ -16,7 +16,7 @@ class XIconsData extends Equatable {
   });
 
   /// Icons have been exported with "Export Icon Font" Figma plugin.
-  factory XIconsData.regular() => XIconsData(
+  factory Icons.regular() => Icons(
         fontFamily: ergosignGlyphIcons2Family,
         fontPackage: package,
         characters: XIconCharactersData.regular(),

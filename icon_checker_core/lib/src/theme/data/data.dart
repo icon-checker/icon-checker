@@ -9,7 +9,6 @@ import 'spacing.dart';
 
 import 'icons.dart';
 import 'radius.dart';
-import 'x_spacing.dart';
 import 'typography.dart';
 
 class XThemeData extends Equatable {
@@ -22,7 +21,6 @@ class XThemeData extends Equatable {
     required this.durations,
     required this.icons,
     required this.radius,
-    required this.x_spacing,
   });
 
   factory XThemeData.regular() => XThemeData(
@@ -32,9 +30,8 @@ class XThemeData extends Equatable {
         spacing: Spacing.regular(),
         typography: Typography.regular(),
         durations: Durations.regular(),
-        icons: XIconsData.regular(),
+        icons: Icons.regular(),
         radius: const XRadiusData.regular(),
-        x_spacing: XSpacingData.regular(),
       );
 
   final Colors colors;
@@ -44,11 +41,9 @@ class XThemeData extends Equatable {
   final Typography typography;
 
   final Durations durations;
-  final XIconsData icons;
+  final Icons icons;
   final XRadiusData radius;
-  final XSpacingData x_spacing;
 
   @override
-  List<Object?> get props =>
-      [constraints, icons, radius, x_spacing, typography];
+  List<Object?> get props => [constraints, icons, radius, typography];
 }
