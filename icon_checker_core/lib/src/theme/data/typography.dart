@@ -10,10 +10,10 @@ const fontSize20 = 20.0;
 const fontSize28 = 28.0;
 
 class Typography extends Equatable {
-  const Typography({
-    required this.buttonStyle,
-    required this.textStyle,
-  });
+  const Typography(
+      {required this.buttonStyle,
+      required this.textStyle,
+      required this.titleStyle});
 
   factory Typography.regular() => const Typography(
         buttonStyle: TextStyle(
@@ -30,10 +30,18 @@ class Typography extends Equatable {
           fontWeight: FontWeight.normal,
           decoration: TextDecoration.none,
         ),
+        titleStyle: TextStyle(
+          fontFamily: interstateFamily,
+          package: package,
+          fontSize: fontSize20,
+          fontWeight: FontWeight.bold,
+          decoration: TextDecoration.none,
+        ),
       );
 
   final TextStyle buttonStyle;
   final TextStyle textStyle;
+  final TextStyle titleStyle;
 
   @override
   List<Object?> get props => [buttonStyle, textStyle];

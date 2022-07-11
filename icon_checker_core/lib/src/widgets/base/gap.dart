@@ -1,71 +1,54 @@
-// import 'package:icon_checker_core/src/theme/theme.dart';
-// import 'package:flutter/widgets.dart';
-// import 'package:gap/gap.dart';
+import 'package:icon_checker_core/icon_checker_core.dart';
 
-// enum GapSize {
-//   none,
-//   small,
-//   semiSmall,
-//   regular,
-//   semiBig,
-//   big,
-// }
+enum GapLevel { custom, small, medium, large }
 
-// extension GapSizeExtension on GapSize {
-//   double getSpacing(XThemeData theme) {
-//     switch (this) {
-//       case GapSize.none:
-//         return 0;
-//       case GapSize.small:
-//         return theme.x_spacing.small;
-//       case GapSize.semiSmall:
-//         return theme.x_spacing.semiSmall;
-//       case GapSize.regular:
-//         return theme.x_spacing.regular;
-//       case GapSize.semiBig:
-//         return theme.x_spacing.semiBig;
-//       case GapSize.big:
-//         return theme.x_spacing.big;
-//     }
-//   }
-// }
+class Gap extends StatelessWidget {
+  const Gap({Key? key, required this.customSpacing, this.isVertical = true})
+      : _level = GapLevel.custom,
+        super(key: key);
 
-// class XGap extends StatelessWidget {
-//   const XGap(
-//     this.size, {
-//     Key? key,
-//   }) : super(key: key);
+  const Gap.small({Key? key, this.isVertical = true})
+      : _level = GapLevel.small,
+        customSpacing = 0,
+        super(key: key);
 
-//   const XGap.small({
-//     Key? key,
-//   })  : size = GapSize.small,
-//         super(key: key);
+  const Gap.medium({Key? key, this.isVertical = true})
+      : _level = GapLevel.medium,
+        customSpacing = 0,
+        super(key: key);
 
-//   const XGap.semiSmall({
-//     Key? key,
-//   })  : size = GapSize.semiSmall,
-//         super(key: key);
+  const Gap.large({Key? key, this.isVertical = true})
+      : _level = GapLevel.large,
+        customSpacing = 0,
+        super(key: key);
 
-//   const XGap.regular({
-//     Key? key,
-//   })  : size = GapSize.regular,
-//         super(key: key);
+  final bool isVertical;
+  final GapLevel _level;
+  final double customSpacing;
 
-//   const XGap.semiBig({
-//     Key? key,
-//   })  : size = GapSize.semiBig,
-//         super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    final theme = XTheme.of(context);
 
-//   const XGap.big({
-//     Key? key,
-//   })  : size = GapSize.big,
-//         super(key: key);
+    var spacing = () {
+      switch (_level) {
+        case GapLevel.large:
+          return theme.spacing.l;
+        case GapLevel.medium:
+          return theme.spacing.m;
+        case GapLevel.custom:
+          return customSpacing;
+        default:
+          return theme.spacing.s;
+      }
+    }();
 
-//   final GapSize size;
+    if (isVertical) {
+      return SizedBox(
+        width: spacing,
+      );
+    }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     final theme = XTheme.of(context);
-//     return Gap(size.getSpacing(theme));
-//   }
-// }
+    return SizedBox(height: spacing);
+  }
+}

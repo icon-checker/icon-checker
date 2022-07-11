@@ -1,6 +1,7 @@
 import 'package:icon_checker_core/icon_checker_core.dart';
+import 'package:icon_checker_core/src/widgets/base/tap_builder.dart';
 
-class Button extends StatefulWidget {
+class Button extends StatelessWidget {
   const Button({Key? key, this.onTap, this.child, this.icon})
       : _text = null,
         super(key: key);
@@ -16,98 +17,50 @@ class Button extends StatefulWidget {
   final Widget? icon;
   final String? _text;
 
-  //tbd icon
-
-  @override
-  State<StatefulWidget> createState() => _ButtonState();
-}
-
-class _ButtonState extends State<Button> {
-  bool _isPressed = false;
-  bool _isHovered = false;
-
-  bool _isEnabled() => widget.onTap != null;
-
-  void _press() {
-    if (!_isEnabled()) return;
-    setState(() {
-      _isPressed = true;
-    });
-  }
-
-  void _release() {
-    if (!_isEnabled()) return;
-    setState(() {
-      _isPressed = false;
-    });
-  }
-
-  void _enter() {
-    if (!_isEnabled()) return;
-    setState(() {
-      _isHovered = true;
-    });
-  }
-
-  void _exit() {
-    if (!_isEnabled()) return;
-    setState(() {
-      _isHovered = false;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     final theme = XTheme.of(context);
 
-    // todo new color class, use enum for visual state.
-    final backgroundColor = _isPressed
-        ? theme.colors.pressedBackground
-        : _isHovered
-            ? theme.colors.hoverBackground
-            : null;
-    final foregroundColor = theme.colors.labels;
+    return TapBuilder(
+        onTap: onTap,
+        builder: (context, visual) {
+          final backgroundColor = visual.isPressed
+              ? theme.colors.pressedBackground
+              : visual.isHovered
+                  ? theme.colors.hoverBackground
+                  : theme.colors.background;
 
-    return ConstrainedBox(
-      constraints: BoxConstraints(
-          minHeight: theme.constraints.sHeight,
-          maxHeight: theme.constraints.sHeight),
-      child: MouseRegion(
-        onEnter: (_) => _enter(),
-        onExit: (_) => _exit(),
-        child: GestureDetector(
-          onTap: widget.onTap,
-          onTapDown: (_) => _press(),
-          onTapUp: (_) => _release(),
-          child: Opacity(
-            opacity: _isEnabled()
-                ? theme.opacities.regularOpacity
-                : theme.opacities.disabledOpacity,
-            child: AnimatedContainer(
-              duration: theme.durations.quick,
-              decoration: BoxDecoration(
-                color: backgroundColor,
-                // todo: radius
-              ),
-              padding: EdgeInsets.only(
-                  left: theme.spacing.m, right: theme.spacing.m),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  if (widget._text != null)
-                    Text(widget._text!,
-                        // todo: font style
-                        style: theme.typography.buttonStyle
-                            .copyWith(color: foregroundColor))
-                  else if (widget.child != null)
-                    widget.child!
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+          final foregroundColor = theme.colors.labels;
+
+          return ConstrainedBox(
+              constraints: BoxConstraints(
+                  minHeight: theme.constraints.sHeight,
+                  maxHeight: theme.constraints.sHeight),
+              child: Opacity(
+                  opacity: visual.isEnabled
+                      ? theme.opacities.regularOpacity
+                      : theme.opacities.disabledOpacity,
+                  child: AnimatedContainer(
+                      duration: theme.durations.regular,
+                      decoration: BoxDecoration(
+                          color: backgroundColor,
+                          borderRadius: theme.radius.asBorderRadius().small,
+                          border: Border.all(color: theme.colors.labels)),
+                      padding: EdgeInsets.only(
+                          left: theme.spacing.m, right: theme.spacing.m),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          if (_text != null)
+                            Label.regular(_text!,
+                                color: visual.isPressed
+                                    ? theme.colors.pressedLabels
+                                    : theme.colors.labels)
+                          else if (child != null)
+                            child!
+                        ],
+                      ))));
+        });
   }
 }

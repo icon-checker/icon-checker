@@ -1,3 +1,3 @@
 export 'gap.dart';
 export 'icon.dart';
-export 'text.dart';
+export 'label.dart';

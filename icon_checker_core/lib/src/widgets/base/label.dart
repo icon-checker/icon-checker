@@ -1,10 +1,9 @@
 import 'package:icon_checker_core/icon_checker_core.dart';
-import 'package:flutter/widgets.dart';
 
 enum TextLevel { pill, title1 }
 
 class Label extends StatelessWidget {
-  const Label.pill(
+  const Label.regular(
     this.data, {
     Key? key,
     this.color,
@@ -37,7 +36,7 @@ class Label extends StatelessWidget {
         case TextLevel.pill:
           return theme.typography.textStyle;
         case TextLevel.title1:
-          return theme.typography.textStyle;
+          return theme.typography.titleStyle;
       }
     }();
     return Text(
